@@ -3,6 +3,7 @@ import PokemonType from "./pokemonType";
 import Countdown from "react-countdown-now";
 import PokemonSprite from "./pokemonSprite";
 import Caught from "./caught";
+import Introduction from "./introduction";
 import getCurrentPokemon from "./utils/getCurrentPokemon";
 // import logo from "./logo.svg";
 import "./App.css";
@@ -72,7 +73,7 @@ function App() {
       <div className="playArea">
         {active && <Countdown date={startDate + time} renderer={renderer} />}
         <div className="field">
-          {currentPokemon &&
+          {currentPokemon ? (
             currentPokemon.map((current, index) => {
               return (
                 <PokemonSprite
@@ -84,7 +85,10 @@ function App() {
                   currentPokemon={currentPokemon}
                 />
               );
-            })}
+            })
+          ) : (
+            <Introduction />
+          )}
         </div>
       </div>
     </div>
