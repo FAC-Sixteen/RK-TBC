@@ -7,10 +7,19 @@ const PokemonType = ({
   setAllPokemon,
   setTeam,
   setActive,
-  setStartDate
+  setStartDate,
+  setCountdown,
+  time,
+  active,
+  setCurrentPokemon
 }) => {
   const selectType = event => {
     setType(event.target.value);
+  };
+
+  const reset = () => {
+    setActive(false);
+    setCurrentPokemon(null);
   };
 
   const submitType = () => {
@@ -20,6 +29,7 @@ const PokemonType = ({
         setTeam([]);
         setActive(true);
         setStartDate(Date.now());
+        setCountdown(time);
       })
       .catch(err => console.log(err));
   };
@@ -48,9 +58,15 @@ const PokemonType = ({
           <option value="18">Fairy</option>
         </select>
 
-        <button type="button" onClick={submitType}>
-          Select
-        </button>
+        {active ? (
+          <button type="button" onClick={reset}>
+            Reset
+          </button>
+        ) : (
+          <button type="button" onClick={submitType}>
+            Select
+          </button>
+        )}
       </form>
     </div>
   );

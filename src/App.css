@@ -1,3 +1,45 @@
 .App {
   text-align: center;
+  width: 100vw;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 3em;
+  padding: 10px 0;
+  width: 100vw;
+}
+
+.field {
+  margin: 0 auto;
+  width: 90vw;
+  height: 70vh;
+  position: relative;
+  /* border: black 2px solid; */
+}
+
+p {
+  font-size: 2em;
+  font-weight: bold;
+}
+select,
+button {
+  margin: 10px;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.countdown {
+  margin: 1em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.playArea {
+  position: relative;
+  width: auto;
+  height: auto;
 }
