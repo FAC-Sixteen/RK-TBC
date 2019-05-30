@@ -1,12 +1,13 @@
 .App {
   text-align: center;
+  width: 100vw;
 }
 
-h1{
-  margin: 10px;
+h1 {
+  margin: 10px 0;
   font-size: 3em;
-  padding: 10px;
-
+  padding: 10px 0;
+  width: 100vw;
 }
 
 .field {
@@ -17,14 +18,28 @@ h1{
   border: black 2px solid;
 }
 
-p{
+p {
   font-size: 2em;
   font-weight: bold;
 }
-select, button{
+select,
+button {
   margin: 10px;
   font-size: 2em;
   padding: 10px;
   border-radius: 5px;
   background: #ffffff;
+}
+
+.countdown {
+  margin: 1em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.playArea {
+  position: relative;
+  width: auto;
+  height: auto;
 }

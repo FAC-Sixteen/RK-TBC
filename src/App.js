@@ -29,7 +29,7 @@ function App() {
         // console.log(total);
         setCountdown(total / 1000);
       }
-      return <p>{total / 1000}s</p>;
+      return <p className="countdown">{total / 1000}s</p>;
     }
   };
 
@@ -69,21 +69,23 @@ function App() {
         active={active}
         setCurrentPokemon={setCurrentPokemon}
       />
-      {active && <Countdown date={startDate + time} renderer={renderer} />}
-      <div className="field">
-        {currentPokemon &&
-          currentPokemon.map((current, index) => {
-            return (
-              <PokemonSprite
-                singlePokemon={current}
-                setTeam={setTeam}
-                team={team}
-                index={index}
-                setCurrentPokemon={setCurrentPokemon}
-                currentPokemon={currentPokemon}
-              />
-            );
-          })}
+      <div className="playArea">
+        {active && <Countdown date={startDate + time} renderer={renderer} />}
+        <div className="field">
+          {currentPokemon &&
+            currentPokemon.map((current, index) => {
+              return (
+                <PokemonSprite
+                  singlePokemon={current}
+                  setTeam={setTeam}
+                  team={team}
+                  index={index}
+                  setCurrentPokemon={setCurrentPokemon}
+                  currentPokemon={currentPokemon}
+                />
+              );
+            })}
+        </div>
       </div>
     </div>
   );
