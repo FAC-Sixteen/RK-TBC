@@ -1,4 +1,5 @@
 import { getPokemonInfo } from "./getPokemon";
+import generatePokemonObject from "./generatePokemonObject";
 
 const getCurrentPokemon = (
   allPokemon,
@@ -14,19 +15,18 @@ const getCurrentPokemon = (
   if (currentPokemon != null) {
     pokemonArray = [...currentPokemon];
   }
-  getPokemonInfo(
-    allPokemon[Math.floor(Math.random() * allPokemon.length)].pokemon.url
-  ).then(json => {
-    if (json.sprites.front_default) {
-      pokemonArray.push(json);
-      setCurrentPokemon(pokemonArray);
-      index++;
-    }
 
-    getCurrentPokemon(allPokemon, setCurrentPokemon, pokemonArray, index);
+  const pokemon = generatePokemonObject(
+    allPokemon[Math.floor(Math.random() * allPokemon.length)].pokemon
+  );
 
-    // return;
-  });
+  pokemonArray.push(pokemon);
+  setCurrentPokemon(pokemonArray);
+  index++;
+
+  getCurrentPokemon(allPokemon, setCurrentPokemon, pokemonArray, index);
+
+  // return;
 };
 
 export default getCurrentPokemon;

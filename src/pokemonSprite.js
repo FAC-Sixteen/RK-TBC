@@ -23,7 +23,7 @@ const PokemonSprite = ({
   return (
     <img
       className="sprite"
-      src={singlePokemon.sprites.front_default}
+      src={singlePokemon.url}
       onClick={addToTeam}
       style={positioning()}
     />
