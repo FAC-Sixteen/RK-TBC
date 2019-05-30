@@ -1,4 +1,5 @@
 import React from "react";
+import "./caught.css";
 
 const Caught = ({ team }) => {
   let title = "Well Done Trainer";
@@ -6,12 +7,12 @@ const Caught = ({ team }) => {
     title = "did you run out of pokeballs or something";
   }
   return (
-    <ul>
+    <ul className="caughtPokemon">
       <h2>{title}</h2>
       <h3>You've caught {team.length} pokemon</h3>
       {team.map(pokemon => {
         return (
-          <li>
+          <li className="pokemonTile">
             <h3>{pokemon.name}</h3>
             <img src={pokemon.sprites.front_default} />
           </li>

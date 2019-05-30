@@ -1,0 +1,16 @@
+.caughtPokemon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemonTile {
+  list-style: none;
+  border: 2px solid black;
+  margin: 1em;
+}
+
+h2,
+h3 {
+  width: 100%;
+}
