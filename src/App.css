@@ -2,8 +2,29 @@
   text-align: center;
 }
 
+h1{
+  margin: 10px;
+  font-size: 3em;
+  padding: 10px;
+
+}
+
 .field {
-  width: 100vw;
-  height: 80vh;
+  margin: 0 auto;
+  width: 90vw;
+  height: 70vh;
   position: relative;
+  border: black 2px solid;
+}
+
+p{
+  font-size: 2em;
+  font-weight: bold;
+}
+select, button{
+  margin: 10px;
+  font-size: 2em;
+  padding: 10px;
+  border-radius: 5px;
+  background: #ffffff;
 }

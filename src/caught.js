@@ -2,9 +2,9 @@ import React from "react";
 import "./caught.css";
 
 const Caught = ({ team }) => {
-  let title = "Well Done Trainer";
+  let title = "Well Done Trainer!!!";
   if (team.length < 20) {
-    title = "did you run out of pokeballs or something";
+    title = "Did you run out of pokeballs or something??";
   }
   return (
     <ul className="caughtPokemon">
