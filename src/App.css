@@ -1,3 +1,9 @@
 .App {
   text-align: center;
 }
+
+.field {
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
