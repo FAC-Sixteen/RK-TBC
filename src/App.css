@@ -15,7 +15,7 @@ h1 {
   width: 90vw;
   height: 70vh;
   position: relative;
-  border: black 2px solid;
+  /* border: black 2px solid; */
 }
 
 p {

@@ -1,6 +1,7 @@
 import React from "react";
 import "./pokemonSprite.css";
 import positioning from "./utils/positioning";
+import grass from "./assets/pokemon-tile-grass.png";
 
 const PokemonSprite = ({
   singlePokemon,
@@ -19,6 +20,12 @@ const PokemonSprite = ({
     setTeam(newTeam);
   };
 
+  const imageError = event => {
+    // console.log(event);
+    event.target.src = grass;
+    singlePokemon.name = "grass";
+  };
+
   // console.log(singlePokemon.name);
   return (
     <img
@@ -26,6 +33,7 @@ const PokemonSprite = ({
       src={singlePokemon.url}
       onClick={addToTeam}
       style={positioning()}
+      onError={imageError}
     />
   );
 };

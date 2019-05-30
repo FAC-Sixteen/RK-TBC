@@ -1,7 +1,13 @@
 import React from "react";
 import "./caught.css";
+import grass from "./assets/pokemon-tile-grass.png";
 
 const Caught = ({ team }) => {
+  const imageError = event => {
+    event.target.src = grass;
+    // console.log(event);
+  };
+
   let title = "Well Done Trainer!!!";
   if (team.length < 20) {
     title = "Did you run out of pokeballs or something??";
@@ -14,7 +20,7 @@ const Caught = ({ team }) => {
         return (
           <li className="pokemonTile">
             <h3>{pokemon.name}</h3>
-            <img src={pokemon.url} />
+            <img src={pokemon.url} onError={imageError} />
           </li>
         );
       })}

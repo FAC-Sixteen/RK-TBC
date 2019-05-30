@@ -7,7 +7,7 @@ import getCurrentPokemon from "./utils/getCurrentPokemon";
 // import logo from "./logo.svg";
 import "./App.css";
 
-const time = 10000;
+const time = 30000;
 
 function App() {
   const [type, setType] = React.useState(1);
@@ -43,9 +43,9 @@ function App() {
 
   React.useEffect(
     () => {
-      console.log(countdown);
+      // console.log(countdown);
 
-      console.log(currentPokemon);
+      // console.log(currentPokemon);
       if (allPokemon != null) {
         getCurrentPokemon(allPokemon, setCurrentPokemon, currentPokemon, 0);
       }
