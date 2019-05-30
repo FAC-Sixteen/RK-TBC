@@ -32,12 +32,13 @@ function App() {
   React.useEffect(
     () => {
       console.log(countdown);
-      // setCurrentPokemon(null);
+    
       console.log(currentPokemon);
       if (allPokemon != null) {
-        getCurrentPokemon(allPokemon, setCurrentPokemon, currentPokemon);
+    
+        getCurrentPokemon(allPokemon, setCurrentPokemon, currentPokemon, 0);
       }
-      return () => setCurrentPokemon(null);
+      // return () => setCurrentPokemon(null);
     },
     [countdown]
   );
