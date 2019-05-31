@@ -20,13 +20,13 @@ const PokemonType = ({
   const reset = () => {
     setActive(false);
     setCurrentPokemon(null);
+    setTeam([]);
   };
 
   const submitType = () => {
     getPokemonByType(type)
       .then(json => {
         setAllPokemon(json);
-        setTeam([]);
         setActive(true);
         setStartDate(Date.now());
         setCountdown(time);
@@ -37,7 +37,11 @@ const PokemonType = ({
   return (
     <div>
       <form>
-        <select name="type" onChange={selectType}>
+        <select
+          name="type"
+          onChange={selectType}
+          aria-label="Select Pokemon Type"
+        >
           <option value="1">Normal</option>
           <option value="2">Fighting</option>
           <option value="3">Flying</option>
