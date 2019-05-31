@@ -31,6 +31,7 @@ const PokemonSprite = ({
     <img
       className="sprite"
       src={singlePokemon.url}
+      alt={singlePokemon.name}
       onClick={addToTeam}
       style={positioning()}
       onError={imageError}

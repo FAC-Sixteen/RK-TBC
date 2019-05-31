@@ -37,7 +37,11 @@ const PokemonType = ({
   return (
     <div>
       <form>
-        <select name="type" onChange={selectType}>
+        <select
+          name="type"
+          onChange={selectType}
+          aria-label="Select Pokemon Type"
+        >
           <option value="1">Normal</option>
           <option value="2">Fighting</option>
           <option value="3">Flying</option>

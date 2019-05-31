@@ -20,7 +20,7 @@ const Caught = ({ team }) => {
         return (
           <li className="pokemonTile">
             <h3>{pokemon.name}</h3>
-            <img src={pokemon.url} onError={imageError} />
+            <img alt={pokemon.name} src={pokemon.url} onError={imageError} />
           </li>
         );
       })}
