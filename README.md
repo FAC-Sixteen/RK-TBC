@@ -26,6 +26,7 @@ Ready for a Poké Adventure? The long grass is waiting. This is a pokémon game 
  2. use `npm i` to install all dependencies
  3. use `npm start` to launch the project on [localhost:3000](http://localhost:3000)
  4. you can use `npm build` to create a local version of how the project will build on the live production version
+ 5. you can run `npm test` to run tests locally. 
 
 ---
 
@@ -55,9 +56,12 @@ Ready for a Poké Adventure? The long grass is waiting. This is a pokémon game 
 
 ---
 
-## Testing 
+## Testing ![link text](https://emojis.slackmojis.com/emojis/images/1479080836/1363/eevee.gif?1479080836)
 
-- [ ] Strech Goal  ![link text](https://emojis.slackmojis.com/emojis/images/1479080836/1363/eevee.gif?1479080836)
+- tests for App.js
+- tests for utils
+
+  We used jest.spyOn to mock API calls 
 
 ## Preview
 
