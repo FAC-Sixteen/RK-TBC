@@ -20,13 +20,13 @@ const PokemonType = ({
   const reset = () => {
     setActive(false);
     setCurrentPokemon(null);
+    setTeam([]);
   };
 
   const submitType = () => {
     getPokemonByType(type)
       .then(json => {
         setAllPokemon(json);
-        setTeam([]);
         setActive(true);
         setStartDate(Date.now());
         setCountdown(time);
